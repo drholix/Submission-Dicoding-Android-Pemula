@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Top Anime 2020</string>
+    <string name="heroes_name">Nama Anime</string>
+    <string name="detail">Detail</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="with_cardview">with CardView</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+    <string name="kontak">kontak</string>
+    <string name="web_developer_android_developer">Web Developer / Android Developer</string>
+    <string name="alief_kurniawan">Alief Kurniawan</string>
+    <string name="email">drholix@gmail.com</string>
+    <string name="email1">Email</string>
+    <string name="linkedin2">https://www.linkedin.com/in/alief-kurniawan-29b6211a6/</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="instagram">Instagram</string>
+    <string name="instagram1">https://www.instagram.com/cloudda1/</string>
+    <string name="github">Github</string>
+    <string name="github1">https://github.com/drholix</string>
+    <string name="sinopsis">Sinopsis</string>
+</resources>
