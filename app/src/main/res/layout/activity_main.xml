@@ -16,9 +16,9 @@
     android:layout_margin="15dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_heroes"
+        android:id="@+id/rv_anime"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_cardview_hero"
+        tools:listitem="@layout/item_cardview_anime"
         android:layout_below="@id/txt_searchtxt"/>
 </RelativeLayout>

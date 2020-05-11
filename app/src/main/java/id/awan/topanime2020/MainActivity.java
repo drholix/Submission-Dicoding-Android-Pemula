@@ -7,19 +7,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView rvHeroes;
+    private RecyclerView rvAnime;
     private ArrayList<Anime> list = new ArrayList<>();
 
     @Override
@@ -28,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        rvHeroes = findViewById(R.id.rv_heroes);
-        rvHeroes.setHasFixedSize(true);
+        rvAnime = findViewById(R.id.rv_anime);
+        rvAnime.setHasFixedSize(true);
 
         list.addAll(AnimeData.getListData());
         showRecyclerCardView();
@@ -65,18 +61,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showRecyclerCardView() {
-        rvHeroes.setLayoutManager(new LinearLayoutManager(this));
-        CardViewHeroAdapter cardViewHeroAdapter = new CardViewHeroAdapter(list);
-        rvHeroes.setAdapter(cardViewHeroAdapter);
+        rvAnime.setLayoutManager(new LinearLayoutManager(this));
+        CardViewAnimeAdapter cardViewAnimeAdapter = new CardViewAnimeAdapter(list);
+        rvAnime.setAdapter(cardViewAnimeAdapter);
 
-        cardViewHeroAdapter.setOnItemClickCallback(new CardViewHeroAdapter.OnItemClickCallback() {
+        cardViewAnimeAdapter.setOnItemClickCallback(new CardViewAnimeAdapter.OnItemClickCallback() {
             @Override
             public void onItemClicked(Anime data) {
                 showSelectedAnime(data);
                 Intent intent = new Intent(MainActivity.this, DetailAnime.class);
                 intent.putExtra(DetailAnime.EXTRA_TITLE, data.getName());
-                intent.putExtra(DetailAnime.EXTRA_OVERVIEW, data.getDetail());
-                intent.putExtra(DetailAnime.EXTRA_LINK, data.getPhoto());
+                intent.putExtra(DetailAnime.EXTRA_DETAIL, data.getDetail());
+                intent.putExtra(DetailAnime.EXTRA_IMG, data.getPhoto());
                 startActivity(intent);
             }
         });

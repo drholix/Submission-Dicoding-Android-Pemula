@@ -19,4 +19,6 @@
     <string name="github">Github</string>
     <string name="github1">https://github.com/drholix</string>
     <string name="sinopsis">Sinopsis</string>
+    <string name="score">Score</string>
+    <string name="episode">Episode</string>
 </resources>

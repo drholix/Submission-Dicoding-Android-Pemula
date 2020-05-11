@@ -3,6 +3,8 @@ package id.awan.topanime2020;
 public class Anime {
     private String name;
     private String detail;
+    private String episodes;
+    private String score;
     private int photo;
 
     public String getName() {
@@ -27,6 +29,22 @@ public class Anime {
 
     public void setPhoto(int photo) {
         this.photo = photo;
+    }
+
+    public String getEpisodes() {
+        return episodes;
+    }
+
+    public void setEpisodes(String episodes) {
+        this.episodes = episodes;
+    }
+
+    public String getScore() {
+        return score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
     }
 }
 
